@@ -1,0 +1,96 @@
+@mixin button {
+  width: 130px;
+  height: 45px;
+  border-radius: $base-border-radius;
+  cursor: pointer;
+  border: none;
+  font-size: $font-size-sm;
+}
+
+.button{
+  @include button;
+  margin-top: $base-margin * 3;
+  background-color: #3498db;
+  color: white;
+}
+
+
+
+@mixin img {
+  border-radius: 50%;
+  width: 80%;
+  height: 300px;
+  outline: rgba(0, 0, 0, 0.27) solid 1px;
+  outline-offset: 10px;
+  object-fit: $object-fit;
+}
+
+.maecenas_images{
+    img{
+        @include img;
+    }
+}
+
+@mixin div{
+    // border: 1px solid red;
+    h1{
+        font-size:$font-size-md;
+        padding-bottom: $base-padding * 2;
+
+    }
+
+    p{
+        color:#999999;
+        line-height: 1.6;
+        // padding-bottom: $base-padding * 3;
+    }
+}
+
+
+.div{
+    @include div;
+}
+
+.div-white{
+    padding-top: $base-padding *4;
+    // margin-right: 80px;
+    color: white;
+    @include div;
+    p{
+    color:#aed6f1;;
+    }
+}
+
+.div-center{
+    padding: $base-padding * 5;
+    text-align: center;
+    @include div
+}
+
+.button-white{
+    @include button;
+    margin-top: $base-margin * 3;
+    background-color: white;
+    color:#3498db;
+  }
+  
+
+
+
+  @mixin media{
+    font-size: $base-font-size;
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    width: 45px;
+    height: 40px;
+    padding-top: 5px;
+    text-align: center;
+    border-radius: 50%;
+    outline: rgba(0, 0, 0, 0.27) solid 1px;
+    outline-offset: 2px;
+  }
+
+  
+
+  .twitter{
+    @include media;
+  }
